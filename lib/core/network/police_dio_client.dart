@@ -1,10 +1,24 @@
 import 'package:dio/dio.dart';
+import 'package:flutter/foundation.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_secure_storage/flutter_secure_storage.dart';
 
 const String _envBaseUrl = String.fromEnvironment('API_BASE_URL');
-const String kDefaultPoliceApiBaseUrl =
+const String _nodeEnv = String.fromEnvironment('NODE_ENV', defaultValue: '');
+
+const String kProdPoliceApiBaseUrl =
+    'https://si-pelantas-open-api.vercel.app/api/v1/police';
+const String kDevPoliceApiBaseUrl =
     'http://192.168.1.52:4000/api/v1/police';
+
+/// Cek apakah mode Production: via NODE_ENV='prod'/'production' atau release build (kReleaseMode)
+final bool kIsProduction = _nodeEnv.toLowerCase() == 'prod' ||
+    _nodeEnv.toLowerCase() == 'production' ||
+    kReleaseMode;
+
+final String kDefaultPoliceApiBaseUrl = _envBaseUrl.isNotEmpty
+    ? _envBaseUrl
+    : (kIsProduction ? kProdPoliceApiBaseUrl : kDevPoliceApiBaseUrl);
 
 final policeSecureStorageProvider = Provider<FlutterSecureStorage>((ref) {
   return const FlutterSecureStorage();
