@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import '../../../core/network/police_dio_client.dart';
+import '../../command_center/presentation/screens/polri_home_shell.dart';
 import 'auth_controller.dart';
 
 class PoliceLoginScreen extends ConsumerStatefulWidget {
@@ -270,6 +271,7 @@ class _PoliceLoginScreenState extends ConsumerState<PoliceLoginScreen> {
                                 ? null
                                 : () {
                                     if (_formKey.currentState!.validate()) {
+                                      ref.read(polriNavIndexProvider.notifier).state = 0;
                                       ref
                                           .read(authStateProvider.notifier)
                                           .login(

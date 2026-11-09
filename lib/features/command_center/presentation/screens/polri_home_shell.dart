@@ -16,6 +16,12 @@ class PolriHomeShell extends ConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
+    ref.listen<AuthState>(authStateProvider, (previous, next) {
+      if (previous?.isAuthenticated != next.isAuthenticated && next.isAuthenticated) {
+        ref.read(polriNavIndexProvider.notifier).state = 0;
+      }
+    });
+
     final authState = ref.watch(authStateProvider);
     final currentIndex = ref.watch(polriNavIndexProvider);
 

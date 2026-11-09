@@ -3,6 +3,7 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import '../../../../core/theme/police_tactical_theme.dart';
 import '../../../auth/domain/entities/police_officer.dart';
 import '../../../auth/presentation/auth_controller.dart';
+import 'polri_home_shell.dart';
 
 class PoliceProfileScreen extends ConsumerStatefulWidget {
   final PoliceOfficer officer;
@@ -648,6 +649,7 @@ class _PoliceProfileScreenState extends ConsumerState<PoliceProfileScreen> {
                     ),
                   ),
                   onPressed: () {
+                    ref.read(polriNavIndexProvider.notifier).state = 0;
                     ref.read(authStateProvider.notifier).logout();
                   },
                 ),
