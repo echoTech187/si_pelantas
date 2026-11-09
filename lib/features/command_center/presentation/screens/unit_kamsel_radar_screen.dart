@@ -1287,12 +1287,13 @@ class _UnitKamselRadarScreenState extends ConsumerState<UnitKamselRadarScreen> {
                                           0.0);
 
                               Color medalColor = const Color(0xFF64748B);
-                              if (rank == 1)
+                              if (rank == 1) {
                                 medalColor = const Color(0xFFFBBF24); // Gold
-                              if (rank == 2)
+                              } else if (rank == 2) {
                                 medalColor = const Color(0xFFE2E8F0); // Silver
-                              if (rank == 3)
+                              } else if (rank == 3) {
                                 medalColor = const Color(0xFFF97316); // Bronze
+                              }
 
                               return Container(
                                 margin: const EdgeInsets.only(bottom: 12),
