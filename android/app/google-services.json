@@ -1,0 +1,67 @@
+{
+  "project_info": {
+    "project_number": "1094599583435",
+    "project_id": "satlantas-ab0ba",
+    "storage_bucket": "satlantas-ab0ba.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1094599583435:android:8bf12e8260a182e0d1dd4e",
+        "android_client_info": {
+          "package_name": "sipelantas.polri.mojokerto"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA6cHLI15wJF5gk4qQQuTvEhKhSgtQb7pg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1094599583435:android:8bf12e8260a182e0d1dd4e",
+        "android_client_info": {
+          "package_name": "sipelantas.polri.mojokerto"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA6cHLI15wJF5gk4qQQuTvEhKhSgtQb7pg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1094599583435:android:8bf12e8260a182e0d1dd4e",
+        "android_client_info": {
+          "package_name": "simonpel.bk.polri.mojokerto"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA6cHLI15wJF5gk4qQQuTvEhKhSgtQb7pg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
